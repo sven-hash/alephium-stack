@@ -1,6 +1,6 @@
 services:
   alephium:
-    image: alephium/alephium:v4.0.1
+    image: alephium/alephium:v4.2.5
     restart: 'no'
     ports:
       - 19973:19973/tcp
@@ -48,7 +48,7 @@ services:
     restart: unless-stopped
 
   explorer-backend:
-    image: alephium/explorer-backend:v3.1.0
+    image: alephium/explorer-backend:v3.3.3
     depends_on:
       postgres:
         condition: service_healthy
